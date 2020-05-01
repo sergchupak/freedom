@@ -14,10 +14,10 @@ function get_pos_html(obj){
 
             list_li_html += '<li class="list-group-item '+normal_ticker+'"">';
             list_li_html += '<button type="button" class="btn btn-outline-danger p_n ticker" >'+item.i+'</button>';
-            list_li_html += '<button type="button" class="btn btn-outline-info p_n">Amount:'+amount+'st</button>';
+            list_li_html += '<button type="button" class="btn btn-outline-info p_n">Amount:<span class="amount_'+normal_ticker+'">'+amount+'</span></button>';
             list_li_html += '<button type="button" class="btn btn-outline-info p_n">Start price: <span class="vhod_'+normal_ticker+'">'+vhod+'</span>$</button>';
             list_li_html += '<button type="button" class="btn btn-outline-info p_n">Current price:<span class="mkt_'+normal_ticker+'">'+mkt+'</span>$</button>';
-            list_li_html += '<button type="button" class="btn btn-outline-success p_n">Result:<span class="result_'+normal_ticker+'">'+parseInt(money)+'</span>$</button>';
+            list_li_html += '<button type="button" class="btn btn-outline-success p_n">Result:<span class="result_span result_'+normal_ticker+'">'+parseInt(money)+'</span>$</button>';
             list_li_html += '</li>';
         }
 
