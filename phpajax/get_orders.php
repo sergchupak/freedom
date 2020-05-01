@@ -8,7 +8,7 @@ $version = Nt\PublicApiClient::V2;
 
 $publicApiClient = new PublicApiClient($apiKey, $apiSecretKey, $version);
 
-$result = $publicApiClient->sendRequest('getOrdersHistory', ['from' => "2020-04-27T00:00:00", "till" => "2020-04-30T23:59:59"]);
+$result = $publicApiClient->sendRequest('getOrdersHistory', ['from' => "2020-05-01T00:00:00", "till" => "2020-05-01T23:59:59"]);
 $result = json_decode($result);
 $orders_arr = array();
 //прогоняем цыклом все ордера

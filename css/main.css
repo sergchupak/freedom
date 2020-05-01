@@ -1,6 +1,6 @@
 .positions{
-    width:100%;
-    min-height:300px;
+    min-width: 810px;
+    float:left;
 }
 .p_n{
     margin-right:10px;
@@ -9,10 +9,8 @@
 
 .orders{
     float:right;
-    width:500px;
+    width:450px;
 }
-
-
 
 
 
