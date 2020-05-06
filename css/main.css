@@ -11,7 +11,16 @@
     float:right;
     width:450px;
 }
-
+#orders_list{
+    clear:both;
+}
+.calendar .form-control{
+    width:120px;
+}
+.calendar .input-group{
+    float:left;
+    width:170px;
+}
 
 
 

@@ -10,6 +10,11 @@
 <script src="js/main.js"></script>
 <script src="js/orders.js"></script>
 <script src="js/prices.js"></script>
+<script src="js/calendar.js"></script>
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
 
 
 <html>
@@ -39,6 +44,24 @@
     <div class="orders">
         <div class="jumbotron orders">
             <h1 class="display-4">Orders</h1>
+            <div class="calendar">
+                <input id="datepicker_from"  />
+                <input id="datepicker_to"  />
+                <script>
+                    $('#datepicker_to').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                    $('#datepicker_from').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>
+                <script>
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap4'
+                    });
+                </script>
+
+            </div>
             <div id="orders_list">
                         <div id="floatBarsG">
                             <div id="floatBarsG_1" class="floatBarsG"></div>
