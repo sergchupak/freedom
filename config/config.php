@@ -4,10 +4,11 @@ $apiSecretKey = "7d831d32c93bcb35b30b378d8dbf4f5256cdb43f";
 
 $pairs = array(
     0 => "CVX:XOM",
-    1 => "C:USB",
+    1 => "MS:GS",
     2 => "MA:V",
-    3 => "LRCX:KLAC",
-    4 => "PKG:WRK",
-    5 => "IP:WRK",
-    6 => "SLG:SPG"
+    3 => "WELL:VTR",
+    4 => "CXO:NOV",
+    5 => "QRVO:SWKS",
+    6 => "AIV:AVB",
+    7 => "SLG:SPG",
 );

@@ -21,6 +21,12 @@
     float:left;
     width:170px;
 }
+.total_result{
+    font-weight:bold;
+    float:right;
+    width:90px;
+    margin-bottom:20px
+}
 
 
 
