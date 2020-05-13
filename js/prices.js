@@ -11,7 +11,7 @@ ws.on('q',
 
         data.q.forEach(function(item, index, array) {
             var normal_ticker = item.c.replace('.US','');
-            if(parseFloat(item.ltp)>0) {
+            if(item.hasOwnProperty('ltp')) {
                 var mkt = parseFloat(item.ltp);
                 var vhod = parseFloat($('#positions_list span.vhod_' + normal_ticker).text());
                 var amount = parseInt($('#positions_list span.amount_' + normal_ticker).text());
