@@ -1,6 +1,26 @@
-var WebSocketsURL = "https://ws.tradernet.ru";
+function update_total_prices() {
+    var pos_count = parseInt($('#positions_list .table').length);
+    for (let i = 0; i < pos_count; i++) {
 
-var ws = io(WebSocketsURL);
+        var sum1 = parseInt($('#positions_list .table:eq(' + i + ') .result_span:eq(0)').text());
+        var sum2 = parseInt($('#positions_list .table:eq(' + i + ') .result_span:eq(1)').text());
+        var total = sum1 + sum2;
+        //console.log(total);
+        $('#positions_list .total_result:eq(' + i + ')').text(total + '$');
+    }
+}
+
+$( document ).ready(function() {
+    let timerId = setInterval(() => update_total_prices(), 2000);
+});
+
+
+
+
+var WebSocketsURL = "https://ws.tradernet.ru";
+var ws = io(WebSocketsURL, {
+    xhrFields: {withCredentials:true}
+});
 var tickersToWatchChanges = ["AIV.US", "AVB.US", "SLG.US", "SPG.US", "CVX.US", "XOM.US","CXO.US", "NOV.US"];
 ws.on('q',
     /**
