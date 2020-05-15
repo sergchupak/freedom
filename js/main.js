@@ -11,6 +11,7 @@ function get_pos_html(obj){
     list_li_html += '<th scope="col">Result</th>';
     list_li_html += '</tr>';
     list_li_html += '</thead>';
+    list_li_html += '<tbody>';
     var total_result = 0;
         obj.forEach(function(item, index, array) {
             var vhod = parseFloat(item.bal_price_a);
@@ -19,8 +20,6 @@ function get_pos_html(obj){
             var money = mkt*amount-vhod*amount;
             var normal_ticker = item.i.replace('.US','');
             total_result = total_result+parseInt(money);
-
-                list_li_html += '<tbody>';
                     if(amount>0)
                         list_li_html += '<tr class="table-success '+normal_ticker+'">';
                     else

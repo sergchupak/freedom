@@ -1,7 +1,3 @@
-.positions{
-    min-width: 810px;
-    float:left;
-}
 .p_n{
     margin-right:10px;
     margin-bottom:10px;
@@ -29,6 +25,10 @@
 }
 .orders{
     display:none;
+}
+.pairs_block{
+
+    clear:both;
 }
 
 

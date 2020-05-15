@@ -59,22 +59,29 @@ $( document ).ready(function() {
     let timerId = setInterval(() => update_total_prices(), 2000);
     var login = 's.ergchupak@gmail.com';
     var pass = 'iOMYzsK280j0';
-    $.ajax({
-        url: 'https://tradernet.ru/api/check-login-password',
-        method: 'POST',
-        data: {
-            login: login,
-            password: pass,
-            rememberMe: 1
-        },
-        success: function (responseText) {
-            var obj = jQuery.parseJSON(responseText);
-            start_socket(obj.SID);
-        },
-        error: function (err) {
-            resultsDiv.text('Error: ' + err.statusText);
-        }
-    });
+    var sid = getCookie('sid');
+    if(sid!=""){
+        start_socket(sid);
+    }
+    else {
+        $.ajax({
+            url: 'https://tradernet.ru/api/check-login-password',
+            method: 'POST',
+            data: {
+                login: login,
+                password: pass,
+                rememberMe: 1
+            },
+            success: function (responseText) {
+                var obj = jQuery.parseJSON(responseText);
+                setCookie('sid', obj.SID, 1);
+                start_socket(obj.SID);
+            },
+            error: function (err) {
+                resultsDiv.text('Error: ' + err.statusText);
+            }
+        });
+    }
 
 
 
